@@ -10,18 +10,16 @@ import com.icss.util.MybatisUtil;
 public class StuAction {
 	
 	private Student student;
-	private Student stu;
-	private Student stuId;
-	private Object stuName;
-
-	public void setStuId(Student stuId) {
+	private String stuId;
+	private String stuName;
+	
+	public void setStuId(String stuId) {
 		this.stuId = stuId;
 	}
 
-	public void setStuName(Object stuName) {
+	public void setStuName(String stuName) {
 		this.stuName = stuName;
 	}
-
 	public void setStudent(Student student) {
 		this.student = student;
 	}
@@ -30,7 +28,7 @@ public class StuAction {
 		System.out.println("login------------------------");
 		SqlSession sqlSession = MybatisUtil.getSqlSession();
 		StudentDao dao = sqlSession.getMapper(StudentDao.class);
-		student = dao.StuLogin(stuId,stuName);
+		student = dao.stuLogin(stuId, stuName);
 		if(student != null){
 			ServletActionContext.getRequest().getSession().setAttribute("stu", student);
 			return "seccess";
@@ -39,5 +37,7 @@ public class StuAction {
 		}
 		
 	}
+
+	
 	
 }

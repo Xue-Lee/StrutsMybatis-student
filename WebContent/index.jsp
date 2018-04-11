@@ -8,6 +8,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>欢迎${student.stuName }</h1>
+<h1>欢迎${stu.stuName }</h1>
 </body>
 </html>

@@ -6,12 +6,12 @@
 		<typeAlias type="com.icss.entity.Student" alias="student"/>
 		
 	</typeAliases>
-	<environments default="t1">
+	<environments default="t2">
 		<environment id="t1">
 			<transactionManager type="JDBC"></transactionManager>
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver"/>
-				<property name="url" value="jdbc:mysql://localhost:3306/student?characterEncoding=utf8"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/stu2018?characterEncoding=utf8"/>
 				<property name="username" value="root"/>
 				<property name="password" value="root"/>
 			</dataSource>
@@ -20,7 +20,7 @@
 			<transactionManager type="JDBC"></transactionManager>
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver"/>
-				<property name="url" value="jdbc:mysql://localhost:3306/watershop?characterEncoding=utf8"/>
+				<property name="url" value="jdbc:mysql://localhost:3306/stu2018?characterEncoding=utf8"/>
 				<property name="username" value="root"/>
 				<property name="password" value="841013"/>
 			</dataSource>
