@@ -6,12 +6,11 @@
 <struts>
     <package name="default" namespace="/" extends="struts-default">
         <action name="login" class="com.icss.action.StuAction" method="login">
-            <result name="seccess">index.jsp</result>
+            <result name="seccess" type="redirectAction">showCourse</result>
             <result name="login">login.jsp</result>
         </action>
-        <action name="showC" class="com.icss.action.StuAction" method="login">
-            <result name="seccess">index.jsp</result>
-            <result name="login">login.jsp</result>
+        <action name="showCourse" class="com.icss.action.StuAction" method="showCourse">
+            <result name="seccess">showCourse.jsp</result>
         </action>
     </package>
    
